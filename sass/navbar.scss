@@ -1,0 +1,32 @@
+.nav-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5em;
+
+  li {
+    margin: 0;
+  }
+
+  a, .navbar-brand, .nav-link {
+    color: $color-link;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 0.5em 1em;
+    border-radius: 6px;
+    transition: background 0.2s, color 0.2s;
+  }
+
+  a.active,
+  a:hover,
+  a:focus,
+  .nav-link.active,
+  .nav-link:hover,
+  .nav-link:focus {
+    background-color: $color-hover;
+    color: #fff;
+  }
+}

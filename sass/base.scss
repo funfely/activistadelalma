@@ -1,0 +1,23 @@
+// Este es el general
+body {
+  background-color: $color-bg;
+  color: $color-text;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow: auto;
+}
+h1, h2, h3 {
+color: $color-text;
+}
+
+// Enlaces generales
+a {
+  color: $color-link;
+  transition: color 0.2s;
+
+  &:hover, &:focus {
+    color: $color-link-hover;
+    text-decoration: underline;
+  }
+}

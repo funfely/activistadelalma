@@ -1,0 +1,15 @@
+.layout-grid {
+  display: grid;
+  min-height: 100vh;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas: "header" "main" "footer";
+}
+.layout-grid header {
+  grid-area: header;
+}
+.layout-grid main {
+  grid-area: main;
+}
+.layout-grid footer {
+  grid-area: footer;
+}/*# sourceMappingURL=layout.css.map */

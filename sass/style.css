@@ -1,0 +1,210 @@
+@charset "UTF-8";
+body {
+  background-color: #FFF8F0;
+  color: #080501;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow: auto;
+}
+
+h1, h2, h3 {
+  color: #080501;
+}
+
+a {
+  color: #7C4D2B;
+  transition: color 0.2s;
+}
+a:hover, a:focus {
+  color: #E29578;
+  text-decoration: underline;
+}
+
+header, .navbar, .footer-grid, .bg-beige {
+  background-color: #e6c9bb;
+}
+
+.footer-grid {
+  border-top: 2px solid #b9a198;
+  padding: 1.2em 0;
+  margin-top: 2em;
+}
+
+.logo-gira {
+  transition: transform 0.7s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+.logo-gira:hover {
+  transform: rotate(360deg) scale(1.08);
+}
+
+.nav-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5em;
+}
+.nav-list li {
+  margin: 0;
+}
+.nav-list a, .nav-list .navbar-brand, .nav-list .nav-link {
+  color: #7C4D2B;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.5em 1em;
+  border-radius: 6px;
+  transition: background 0.2s, color 0.2s;
+}
+.nav-list a.active,
+.nav-list a:hover,
+.nav-list a:focus,
+.nav-list .nav-link.active,
+.nav-list .nav-link:hover,
+.nav-list .nav-link:focus {
+  background-color: #FFB4A2;
+  color: #fff;
+}
+
+.main-content, .intro-section {
+  max-width: 950px;
+  margin: 0 auto;
+  padding: 2em 1em 2em 1em;
+  background-color: #ece3dd;
+  border-radius: 12px;
+  border: 1.5px solid #b9a198;
+}
+
+.intro-section {
+  text-align: center;
+  margin-bottom: 2em;
+}
+
+.sobremi-card, .card, .form-group, .form-grid {
+  background: #ece3dd;
+  border: 1.5px solid #b9a198;
+  border-radius: 14px;
+  box-shadow: 0 2px 12px rgba(226, 149, 120, 0.07);
+  padding: 1.5em;
+  margin-bottom: 1.5em;
+  box-sizing: border-box;
+  transition: box-shadow 0.3s, border-color 0.3s, background 0.3s;
+}
+.sobremi-card:hover, .sobremi-card:focus-within, .card:hover, .card:focus-within, .form-group:hover, .form-group:focus-within, .form-grid:hover, .form-grid:focus-within {
+  border-color: #FFB4A2;
+  box-shadow: 0 4px 20px rgba(226, 149, 120, 0.16);
+  background: #e6c9bb;
+}
+
+input, textarea {
+  background: #FFF8F0;
+  border: 1px solid #b9a198;
+  color: #080501;
+  border-radius: 8px;
+  padding: 0.5em;
+}
+input:focus, textarea:focus {
+  border-color: #FFB4A2;
+  outline: none;
+}
+
+button, .form-actions button {
+  background: #FFB4A2;
+  color: #080501;
+  border: none;
+  border-radius: 8px;
+  padding: 0.5em 1.2em;
+  font-weight: bold;
+  transition: background 0.2s, color 0.2s;
+}
+button:hover, .form-actions button:hover {
+  background: #b9a198;
+  color: #fff;
+}
+
+.buddha-animada {
+  opacity: 0;
+  transform: scale(0.9);
+  animation: buddhaFadeIn 1.2s ease-out forwards;
+  transition: transform 0.3s;
+}
+.buddha-animada:hover {
+  transform: scale(1.05) rotate(-2deg);
+  box-shadow: 0 8px 24px rgba(226, 149, 120, 0.18);
+}
+
+@keyframes buddhaFadeIn {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+.layout-grid {
+  display: grid;
+  min-height: 100vh;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas: "header" "main" "footer";
+}
+.layout-grid header {
+  grid-area: header;
+}
+.layout-grid main {
+  grid-area: main;
+}
+.layout-grid footer {
+  grid-area: footer;
+}
+
+/* Mapa responsive */
+.map-responsive {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* Proporción 16:9 */
+  height: 0;
+  overflow: hidden;
+}
+
+.map-responsive iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* Formulario responsive */
+@media (max-width: 800px) {
+  .main-content {
+    padding: 1em 0.5em;
+  }
+  .form-grid {
+    display: block !important;
+  }
+  .form-group,
+  .form-group-full {
+    width: 100% !important;
+    box-sizing: border-box;
+  }
+  .form-actions {
+    text-align: center;
+  }
+}
+@media (max-width: 600px) {
+  .main-content {
+    padding: 0.5em;
+  }
+  .form-grid {
+    display: block !important;
+  }
+  .form-group,
+  .form-group-full {
+    width: 100% !important;
+    box-sizing: border-box;
+  }
+  .form-actions {
+    text-align: center;
+  }
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,26 @@
+input, textarea {
+  background: $color-bg;
+  border: 1px solid $color-border;
+  color: $color-text;
+  border-radius: 8px;
+  padding: 0.5em;
+
+  &:focus {
+    border-color: $color-hover;
+    outline: none;
+  }
+}
+button, .form-actions button {
+  background: $color-hover;
+  color: $color-text;
+  border: none;
+  border-radius: 8px;
+  padding: 0.5em 1.2em;
+  font-weight: bold;
+  transition: background 0.2s, color 0.2s;
+
+  &:hover {
+    background: $color-border;
+    color: #fff;
+  }
+}
